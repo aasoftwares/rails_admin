@@ -105,8 +105,7 @@
         case 'belongs_to_association':
           control = $('<select class="switch-additional-fieldsets input-sm form-control"></select>')
             .prop('value', field_operator)
-            .prop('name', operator_name)
-            .append('<option value="_discard">...</option>')
+            .prop('name', operator_name)            
             .append($('<option data-additional-fieldset="additional-fieldset" value="like" selected="selected"></option>').prop('selected', field_operator == "like").text(RailsAdmin.I18n.t("contains")))
             .append($('<option data-additional-fieldset="additional-fieldset" value="is"></option>').prop('selected', field_operator == "is").text(RailsAdmin.I18n.t("is_exactly")))
             .append($('<option data-additional-fieldset="additional-fieldset" value="starts_with"></option>').prop('selected', field_operator == "starts_with").text(RailsAdmin.I18n.t("starts_with")))
