@@ -108,7 +108,9 @@ module RailsAdmin
         # - model - a RailsAdmin::AbstractModel
         def listing_for_model_or_object(model, object, query, sort, sort_reverse, all, page, per_page)
           if sort.present?
-            sort = COLUMN_MAPPING[sort.to_sym]
+            #sort = COLUMN_MAPPING[sort.to_sym]
+            sort = :created_at
+            sort_reverse = 'true'
           else
             sort = :created_at
             sort_reverse = 'true'
